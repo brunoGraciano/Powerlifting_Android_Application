@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_lift_nav"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_menu_add" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:stretchColumns="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/dateHeader_row"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_header"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Date"
+                android:textAlignment="textStart"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                tools:layout_editor_absoluteX="45dp"
+                tools:layout_editor_absoluteY="35dp" />
+
+            <TextView
+                android:id="@+id/liftHeader_row"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_header"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Lift"
+                android:textAlignment="textStart"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                tools:layout_editor_absoluteX="45dp"
+                tools:layout_editor_absoluteY="35dp" />
+
+            <TextView
+                android:id="@+id/repsHeader_row"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_header"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Reps"
+                android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                tools:layout_editor_absoluteX="120dp"
+                tools:layout_editor_absoluteY="34dp" />
+
+            <TextView
+                android:id="@+id/weighHeader_row"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_header"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Weight"
+                android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                tools:layout_editor_absoluteX="189dp"
+                tools:layout_editor_absoluteY="34dp" />
+
+            <TextView
+                android:id="@+id/repMaxHeader_row"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_header"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="1RM"
+                android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                tools:layout_editor_absoluteX="267dp"
+                tools:layout_editor_absoluteY="34dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout">
+
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>
